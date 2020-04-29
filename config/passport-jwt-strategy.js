@@ -9,6 +9,7 @@ let opts = {
   secretOrKey: "question",
 };
 
+//using passport jwt to authenticate the user
 passport.use(
   new JWTStrategy(opts, function (jwtPayload, done) {
     User.findById(jwtPayload._id, function (err, user) {

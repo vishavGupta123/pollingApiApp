@@ -1,5 +1,7 @@
 const User = require("../../model/user");
 const jwt = require("jsonwebtoken");
+
+//sign up a new user. If the user already exist then return else create another user
 module.exports.signUp = async function (req, res) {
   let user = await User.findOne({ username: req.body.username });
   if (user) {
@@ -20,6 +22,7 @@ module.exports.signUp = async function (req, res) {
   }
 };
 
+//create a json web token which can be verified with further protected routes
 module.exports.createSession = async function (req, res) {
   try {
     console.log(req.body);

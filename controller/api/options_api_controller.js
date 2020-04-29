@@ -12,6 +12,7 @@ module.exports.deleteOption = async function (req, res) {
           message: "Cannot delete an upvoted option",
         });
       }
+      //if some another user is trying to delete the option which he/she has not created then they will recieve an unauthorized error
       if (req.user.id != option.user) {
         return res.json(401, {
           message: "you cannot delete this option as you are not authourized",

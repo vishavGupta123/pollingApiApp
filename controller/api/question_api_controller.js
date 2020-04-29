@@ -122,6 +122,7 @@ module.exports.deleteQuestion = async function (req, res) {
         }
       }
       console.log(req.user.id, "***", question.user);
+      //if some other user who has not created that particular question tries to delete that question then he/she will recieve an error
       if (req.user.id != question.user) {
         return res.status(401).json({
           message: "You cannot delete this question as you have not created it",
