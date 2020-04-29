@@ -1,6 +1,6 @@
 Getting Started:
 
-Step 1:To copy the project from my github profile just run the following command :"git clone https://gitlab.com/vishavGupta/questionsapp.git".
+Step 1:To copy the project from my github profile just run the following command :"git clone https://github.com/vishavGupta123/pollingApiApp".
 
 Step 2:install all the dependencies mentioned inside the Package.Json file by running the 'npm install "name of the library"'.
 
